@@ -195,100 +195,70 @@
 
 
 
-# creating dictionary
-
-
-# dict = {
-#     "name" : "Anas wazir",
-#     "f_name" : "Jameel khan",
-#     "marks" : 95,
-#     "price" : 19.9,
-#     "Student" : True
-# }
-
-# print(dict)
 
 
 
-# Accessing value
-# name = {
-#     "name1" : "Anas khan",
-#     "name2" : "Zahid Ullah",
-#     "name3" : "samad Ullah"
-# }
-
-# print(name["name1"])
-# print(name.get("name2"))
-# print(name.get("name3","N/A")) #N/A is default is messing
 
 
-# Adding and updating items
+contacts = {}
 
-# student = {
-#     "name" : "Anas khan",
-#     "R_NO" : 15,
-#     "Age" : 17,
-    
-# }
+while True:
+    print("\n--- Contact Book ---")
+    print("1. Add Contact")
+    print("2. Search Contact")
+    print("3. Update Phone")
+    print("4. Delete Contact")
+    print("5. Show All Contacts")
+    print("6. Exit")
 
-# student["course"] = "python" # add a new key
-# student["R_NO"] = 20 # updating and existing key
-# print(student)
+    choice = input()
 
+    if choice == "1":
+        name = input()
+        phone = input()
+        email = input()
 
+        contacts[name] = {
+            "phone": phone,
+            "email": email
+        }
 
-# Removing item
-# name = {
-#     "name1" : "Anas khan",
-#     "name2" : "Zahid Ullah",
-#     "name3" : "samad Ullah"
-# }
+        print("Contact added!")
 
-# del name["name1"] #remove a key
-# name2 = name.pop("name3") #remove and return the value
-# name.clear() # remove everythin
-# print(name2) 
-# print(name)
+    elif choice == "2":
+        name = input()
 
+        if name in contacts:
+            print(contacts[name])
+        else:
+            print("Contact not found.")
 
+    elif choice == "3":
+        name = input()
 
-# nested dictionary and aplly all dictionary method 
-# student = {
-#     "name" : "Anas khan",
-#    " subject" : {
-#        "phy" : 95,
-#        "che" : 98,
-#        "com" : 99,
-       
-        
-#     }
-# }
+        if name in contacts:
+            phone = input()
+            contacts[name]["phone"] = phone
+            print("Phone updated!")
+        else:
+            print("Contact not found.")
 
-# print(student.keys()) # return only key
-# print(student.values()) # return only value
-# print(student.items()) # return all (key , value) pairs
+    elif choice == "4":
+        name = input()
 
-# total_marks = (student[" subject"]["phy"]
-# + student[" subject"]["che"] + student[" subject"]["com"])
-# print("Total Marks:",total_marks)
+        if name in contacts:
+            del contacts[name]
+            print("Contact deleted!")
+        else:
+            print("Contact not found.")
 
-# average = total_marks/3
-# print(f"Average: {average:.2f}")
+    elif choice == "5":
+        for name in contacts:
+            print(name, contacts[name])
 
+    elif choice == "6":
+        break
 
+    else:
+        print("Invalid choice.")
 
-# Dictionary comprehension
-# square = {x: x ** 2 for x in range(1,6)}
-# print(square)
-# print(type(square))
-
-
-
-subject = {
-       "phy" : 95,
-       "che" : 98,
-       "com" : 99,
-    }
-
-heighest = max(subject,key=subject.get)
-print(heighest)
