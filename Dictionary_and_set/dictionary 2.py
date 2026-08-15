@@ -211,12 +211,12 @@ while True:
     print("5. Show All Contacts")
     print("6. Exit")
 
-    choice = input()
+    choice = input("Enter your choic: ")
 
     if choice == "1":
-        name = input()
-        phone = input()
-        email = input()
+        name = input("Enter name: ")
+        phone = input("Enter phone: ")
+        email = input("Enter email: ")
 
         contacts[name] = {
             "phone": phone,
@@ -226,7 +226,7 @@ while True:
         print("Contact added!")
 
     elif choice == "2":
-        name = input()
+        name = input("Enter your name: ")
 
         if name in contacts:
             print(contacts[name])
@@ -234,17 +234,17 @@ while True:
             print("Contact not found.")
 
     elif choice == "3":
-        name = input()
+        name = input("Enter your name: ")
 
         if name in contacts:
-            phone = input()
+            phone = input("Enter your phone number: ")
             contacts[name]["phone"] = phone
             print("Phone updated!")
         else:
             print("Contact not found.")
 
     elif choice == "4":
-        name = input()
+        name = input("Enter your name: ")
 
         if name in contacts:
             del contacts[name]
