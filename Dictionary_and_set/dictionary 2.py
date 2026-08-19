@@ -200,65 +200,127 @@
 
 
 
-contacts = {}
+# contacts = {}
+
+# while True:
+#     print("\n--- Contact Book ---")
+#     print("1. Add Contact")
+#     print("2. Search Contact")
+#     print("3. Update Phone")
+#     print("4. Delete Contact")
+#     print("5. Show All Contacts")
+#     print("6. Exit")
+
+#     choice = input("Enter your choic: ")
+
+#     if choice == "1":
+#         name = input("Enter name: ")
+#         phone = input("Enter phone: ")
+#         email = input("Enter email: ")
+
+#         contacts[name] = {
+#             "phone": phone,
+#             "email": email
+#         }
+
+#         print("Contact added!")
+
+#     elif choice == "2":
+#         name = input("Enter your name: ")
+
+#         if name in contacts:
+#             print(contacts[name])
+#         else:
+#             print("Contact not found.")
+
+#     elif choice == "3":
+#         name = input("Enter your name: ")
+
+#         if name in contacts:
+#             phone = input("Enter your phone number: ")
+#             contacts[name]["phone"] = phone
+#             print("Phone updated!")
+#         else:
+#             print("Contact not found.")
+
+#     elif choice == "4":
+#         name = input("Enter your name: ")
+
+#         if name in contacts:
+#             del contacts[name]
+#             print("Contact deleted!")
+#         else:
+#             print("Contact not found.")
+
+#     elif choice == "5":
+#         for name in contacts:
+#             print(name, contacts[name])
+
+#     elif choice == "6":
+#         break
+
+#     else:
+#         print("Invalid choice.")
+
+
+
+
+
+
+
+
+
+contact = {}
 
 while True:
-    print("\n--- Contact Book ---")
-    print("1. Add Contact")
-    print("2. Search Contact")
-    print("3. Update Phone")
-    print("4. Delete Contact")
-    print("5. Show All Contacts")
-    print("6. Exit")
-
-    choice = input("Enter your choic: ")
-
+    print("----CONTACT BOOK----")
+    print("1. Add contact")
+    print("2. Search contact")
+    print("3. Update contact")
+    print("4. Delete contact")
+    print("5. Show all contact")
+    print("6. Exist")
+    
+    
+    choice = input("Enter your choice: ")
     if choice == "1":
-        name = input("Enter name: ")
-        phone = input("Enter phone: ")
-        email = input("Enter email: ")
-
-        contacts[name] = {
-            "phone": phone,
-            "email": email
+        name = input("Enter your name: ")
+        phone = input("Enter your phone number: ")
+        Email = input("Enter your email: ")
+        
+        contact[name] = {
+            "phone" : phone,
+            "Email" : email
         }
-
-        print("Contact added!")
-
+        
+        print("Contact Added")
     elif choice == "2":
         name = input("Enter your name: ")
-
-        if name in contacts:
-            print(contacts[name])
+        if name in contact:
+            print(contact[name])
         else:
-            print("Contact not found.")
-
+            print("contact not found")
     elif choice == "3":
         name = input("Enter your name: ")
-
-        if name in contacts:
+        if name in contact:
             phone = input("Enter your phone number: ")
-            contacts[name]["phone"] = phone
-            print("Phone updated!")
+            contact[name]["phone"] = phone
+            print("Update your phone number")
         else:
-            print("Contact not found.")
-
+            print("Contact not found")
     elif choice == "4":
         name = input("Enter your name: ")
-
-        if name in contacts:
-            del contacts[name]
-            print("Contact deleted!")
+        if name in contact:
+            del contact[name]
+            print("Delete contact number")
         else:
-            print("Contact not found.")
-
+            print("Contact not found")
     elif choice == "5":
-        for name in contacts:
-            print(name, contacts[name])
-
+        for name in contact:
+            print(name,contact[name])
     elif choice == "6":
         break
-
     else:
-        print("Invalid choice.")
-
+        print("Invalid choice")
+        
+        

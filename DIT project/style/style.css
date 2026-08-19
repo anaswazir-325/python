@@ -1,0 +1,19 @@
+.nav{
+   
+     float: left;
+}
+
+ul li{
+    float: left;
+    background-color: #111111;
+    list-style:  none;
+ 
+}
+ul li a{
+       width: 400px;
+    display: block;
+     color: white;
+  text-align: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
