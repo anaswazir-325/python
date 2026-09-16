@@ -60,8 +60,12 @@
 
 
 # tuple method 
-number = (1,2,3,2,4,2)
-print(number.count(2))
-print(number.index(4))
+# number = (1,2,3,2,4,2)
+# print(number.count(2))
+# print(number.index(4))
 
 
+list = ["level","madam","racecar","hello"]
+for item in list:
+    if item ==item[::-1]:
+       print(item,"is a polindrome")

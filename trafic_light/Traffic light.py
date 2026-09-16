@@ -2,7 +2,7 @@ import tkinter as tk
 
 # Initialize the window
 root = tk.Tk()
-root.title("Anasa wazir")
+root.title("Anas wazir")
 canvas = tk.Canvas(root, width=100, height=250, bg="red")
 canvas.pack()
 
